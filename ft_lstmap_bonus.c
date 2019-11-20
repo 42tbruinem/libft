@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/04 11:09:58 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/19 11:52:32 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/20 13:00:06 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ static t_list	*map_one(t_list *lst, void *(*f)(void *), void (*del)(void *),
 		new = ft_lstnew(f(lst->content));
 		if (new == NULL)
 		{
-			ft_lstclear(toclear, del);
+			if (del)
+				ft_lstclear(toclear, del);
 			return (NULL);
 		}
 	}
@@ -45,9 +46,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		tmp = map_one(lst, f, del, &begin);
 		if (tmp == NULL)
 			return (NULL);
-		if (lst == start)
-			begin = tmp;
-		tmp = tmp->next;
+		ft_lstadd_back(&begin, tmp);
 		lst = lst->next;
 	}
 	return (begin);
