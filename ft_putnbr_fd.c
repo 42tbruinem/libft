@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/30 15:30:13 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/10/31 18:37:26 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/21 14:52:35 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 		nb = n;
-	if (nb > 10)
+	if (nb >= 10)
 		ft_putnbr_fd(nb / 10, fd);
 	c = (nb % 10) + '0';
 	write(fd, &c, 1);

@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 19:29:15 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/15 11:50:46 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/21 15:57:12 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == (unsigned char)c)
-			return ((void *)str + i);
+			return (str + i);
 		i++;
 	}
 	return (0);

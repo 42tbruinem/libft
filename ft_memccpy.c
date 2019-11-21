@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:17:26 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/19 11:55:03 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/21 15:56:17 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		d[i] = s[i];
 		if (s[i] == (unsigned char)c)
-			return ((void *)&d[i + 1]);
+			return (&d[i + 1]);
 		i++;
 	}
 	return (NULL);

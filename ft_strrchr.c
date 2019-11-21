@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 17:20:30 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/19 12:26:36 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/21 16:25:20 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strrchr(const char *str, int c)
 	int		i;
 
 	i = 0;
+	if (str == NULL)
+		return (NULL);
 	while (str[i])
 		i++;
 	while (i >= 0)
