@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 16:34:55 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/21 16:49:22 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/25 12:38:32 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	s = ft_memset(s, '\0', n);
+	size_t	i;
+	char	*str;
+
+	i = 0;
+	str = (char *)s;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
 }

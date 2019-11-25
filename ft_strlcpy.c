@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 19:12:33 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/21 16:11:57 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/25 16:18:09 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
 	size_t	i;
-	int		srclen;
+	size_t	srclen;
 
 	i = 0;
-	if (!dest || !src)
-		return (i);
 	srclen = ft_strlen(src);
 	if (dstsize == 0)
 		return (srclen);

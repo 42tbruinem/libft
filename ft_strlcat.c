@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 17:22:07 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/21 16:10:23 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/25 16:06:02 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	srclen = ft_strlen(src);
 	if (dstsize == 0)
 		return (srclen);
-	dstlen = ft_strlen(dest);
+	dstlen = ft_strnlen(dest, dstsize);
 	if (dstsize <= dstlen)
 		return (dstsize + srclen);
 	i = 0;

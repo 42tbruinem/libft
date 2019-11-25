@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 14:28:35 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/21 15:58:38 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/25 16:05:21 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct		s_list
 }					t_list;
 
 size_t				ft_strlen(const char *s);
+size_t				ft_strnlen(const char *s, size_t maxlen);
 int					ft_atoi(const char *str);
 void				*ft_calloc(size_t count, size_t size);
 void				ft_bzero(void *s, size_t n);

@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 17:21:31 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/06 13:24:44 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/25 16:21:58 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *str, int c)
 {
 	char	*ptr;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	ptr = NULL;

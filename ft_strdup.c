@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 17:40:17 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/12 11:26:32 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/25 16:22:23 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		i;
+	size_t	i;
 	char	*dup;
 
 	i = 0;
 	while (s1[i])
 		i++;
-	dup = malloc(sizeof(char) * (i + 1));
+	dup = (char *)malloc(sizeof(char) * (i + 1));
 	if (dup == NULL)
 		return (NULL);
 	i = 0;

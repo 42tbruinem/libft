@@ -6,7 +6,7 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/30 12:44:04 by tbruinem       #+#    #+#                */
-/*   Updated: 2019/11/19 12:02:42 by tbruinem      ########   odam.nl         */
+/*   Updated: 2019/11/22 12:40:26 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ static int		get_size(const char *s, char c)
 		last = s[i];
 		i++;
 	}
+	if (c == '\0')
+		return (1);
 	return (size);
 }
 
